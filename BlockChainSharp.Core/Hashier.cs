@@ -4,14 +4,15 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using BlockChainSharp.Core.Models;
 
 namespace BlockChainSharp.Core
 {
     class Hashier
     {
-        public static string GetHash(HashAlgorithm hashAlgorithm, string data)
+        public static string GetHash(HashAlgorithm hashAlgorithm, BlockDataModel data)
         {
-            byte[] byteData = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(data));
+            byte[] byteData = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(data.ToString()));
 
             var sBuilder = new StringBuilder();
 

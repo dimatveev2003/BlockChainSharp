@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
+using BlockChainSharp.Core.Models;
 
 namespace BlockChainSharp.Core
 {
@@ -14,15 +15,15 @@ namespace BlockChainSharp.Core
         private readonly int index;
         private readonly DateTime timeStamp;
         private readonly string hash;
-        private readonly string data;
+        private readonly BlockDataModel data;
         private readonly string previousHash;
 
-        public string Data => data;
+        public BlockDataModel Data => data;
         public string Hash => hash;
         public int Index => index;
         public string PreviousHash => previousHash;
 
-        public Block(int index, DateTime timeStamp, string data, string previousHash)
+        public Block(int index, DateTime timeStamp, BlockDataModel data, string previousHash)
         {
             this.index = index;
             this.timeStamp = timeStamp;
