@@ -8,7 +8,8 @@ using BlockChainSharp.Core.Models;
 
 namespace BlockChainSharp.Core
 {
-    class Chain
+    [Serializable]
+    public class Chain
     {
         private List<Block> blocks;
 

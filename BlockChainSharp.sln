@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockChainSharp", "BlockChainSharp\BlockChainSharp.csproj", "{AD13BFB1-1C8B-4DE7-AC2D-C3FF6E638D83}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2D9B68F5-5DEF-4AEB-8849-8BFF65C8A152} = {2D9B68F5-5DEF-4AEB-8849-8BFF65C8A152}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockChainSharp.Core", "BlockChainSharp.Core\BlockChainSharp.Core.csproj", "{2D9B68F5-5DEF-4AEB-8849-8BFF65C8A152}"
 EndProject

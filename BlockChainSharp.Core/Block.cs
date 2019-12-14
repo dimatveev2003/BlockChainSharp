@@ -10,7 +10,8 @@ using BlockChainSharp.Core.Models;
 
 namespace BlockChainSharp.Core
 {
-    class Block
+    [Serializable]
+    public class Block
     {
         private readonly int index;
         private readonly DateTime timeStamp;
@@ -22,6 +23,7 @@ namespace BlockChainSharp.Core
         public string Hash => hash;
         public int Index => index;
         public string PreviousHash => previousHash;
+        public DateTime TimeStamp => timeStamp;
 
         public Block(int index, DateTime timeStamp, BlockDataModel data, string previousHash)
         {

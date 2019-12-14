@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlockChainSharp.Core.Models
 {
-    class BlockDataModel
+    public class BlockDataModel
     {
         public  DateTime TransactionTime { get; set; }
         public Person FromPerson { get; set; }
