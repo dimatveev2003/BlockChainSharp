@@ -13,6 +13,8 @@ namespace BlockChainSharp.Core
     {
         private List<Block> blocks;
 
+        public List<Block> Blocks => blocks;
+
         public Chain()
         {
             var fromPerson = new Person()

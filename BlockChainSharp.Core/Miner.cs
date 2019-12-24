@@ -12,7 +12,7 @@ namespace BlockChainSharp.Core
         //доказательство выполнения работы - хеш полученного блока содержит в начале три нуля
         private static bool CheckHashRule(string hash)
         {
-            return hash[0] == '0' && hash[1] == '0' && hash[2] == '0';
+            return hash[0] == '0' && hash[1] == '0' && hash[2] == '0' && hash[3] == '1';
         }
 
         public static Block GetBlock(Block prevBlock)

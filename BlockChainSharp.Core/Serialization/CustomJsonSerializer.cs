@@ -26,13 +26,12 @@ namespace BlockChainSharp.Core.Serialization
 
         public T DeserializeFromFile(string fileName)
         {
+            string temp;
             using (StreamReader sr = File.OpenText(fileName))
             {
-                string temp = sr.ReadToEnd();
-
-                return JsonConvert.DeserializeObject<T>(temp);
+                temp = sr.ReadToEnd();
             }
-
+            return JsonConvert.DeserializeObject<T>(temp);
         }
 
         public void Dispose()
