@@ -39,7 +39,7 @@ namespace BlockChainSharp.Core
                 Amount = 0
             };
             var genesisBlock = new Block(0, DateTime.Now, genesisData,
-                "816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7");
+                "816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7", 0);
             blocks = new List<Block> {genesisBlock};
         }
 
@@ -54,13 +54,18 @@ namespace BlockChainSharp.Core
             return blocks;
         }
 
+        public Block GetLastBlock()
+        {
+            return blocks.Last();
+        }
+
         public bool IsValidNewBlock(Block newBlock, Block prevBlock)
         {
             if (prevBlock.Index + 1 != newBlock.Index)
                 return false;
             if (prevBlock.Hash != newBlock.PreviousHash)
                 return false;
-            if (Hashier.GetHash(SHA256.Create(), newBlock.Data) != newBlock.Hash)
+            if (Hashier.GetHash(SHA256.Create(), newBlock.Index, newBlock.TimeStamp, newBlock.Data, newBlock.PreviousHash, newBlock.Nonce) != newBlock.Hash)
                 return false;
             return true;
         }

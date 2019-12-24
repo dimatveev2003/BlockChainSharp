@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Block.cs" />
+    <Compile Include="Miner.cs" />
     <Compile Include="Serialization\ISerializer.cs" />
     <Compile Include="Models\BlockDataModel.cs" />
     <Compile Include="Chain.cs" />

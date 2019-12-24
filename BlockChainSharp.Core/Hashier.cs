@@ -10,9 +10,9 @@ namespace BlockChainSharp.Core
 {
     class Hashier
     {
-        public static string GetHash(HashAlgorithm hashAlgorithm, BlockDataModel data)
+        public static string GetHash(HashAlgorithm hashAlgorithm, int index, DateTime timeStamp, BlockDataModel data, string previousHash, int nonce)
         {
-            byte[] byteData = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(data.ToString()));
+            byte[] byteData = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(index.ToString() + previousHash + data.ToString() + timeStamp.ToString() + nonce.ToString()));
 
             var sBuilder = new StringBuilder();
 
